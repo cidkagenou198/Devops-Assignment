@@ -56,6 +56,41 @@ ps
 echo ""
 echo "Process information saved in: $dir/processes.txt"
 
+# Store basic information in variables
+date=$(date)
+hostname=$(hostname)
+username=$(whoami)
+
+echo "Enter the directory name:"
+read -p "Directory: " dir
+
+# Create directory
+mkdir -p "$dir"
+
+# Create file
+touch "$dir/processes.txt"
+
+# Save running processes to the file
+ps > "$dir/processes.txt"
+
+echo ""
+echo "System Information"
+echo "------------------"
+echo "Date: $date"
+echo "Hostname: $hostname"
+echo "Username: $username"
+
+echo ""
+echo "Disk Usage:"
+df -h
+
+echo ""
+echo "Running Processes:"
+ps
+
+echo ""
+echo "Process information saved in: $dir/processes.txt"
+
 
 
 ## Output
