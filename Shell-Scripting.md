@@ -1,41 +1,35 @@
 # System Information Shell Script
 
-This script displays basic system information and saves the running processes to a file.
+This is a simple shell script that displays basic system information, takes a directory name from the user, and saves running process information into a file.
 
 ## Commands Used
 
-- `date` - shows the current date
-- `hostname` - shows the computer hostname
-- `whoami` - shows the current username
-- `df -h` - shows disk usage
-- `ps` - shows running processes
-- `read -p` - takes input from the user
-- `mkdir` - creates a directory
-- `touch` - creates a file
-- `echo` - prints text
-- `>` - saves command output to a file
+* `date` - shows the current date
+* `hostname` - shows the system hostname
+* `whoami` - shows the current username
+* `df -h` - shows disk usage
+* `ps` - shows running processes
+* `read -p` - takes input from the user
+* `mkdir` - creates a directory
+* `touch` - creates a file
+* `echo` - prints text
+* `>` - saves command output into a file
+* Variables - store information for later use
 
-system_info.sh
+## Shell Script
 
-#code
-
+```bash
 #!/bin/bash
 
-# Store basic information in variables
 date=$(date)
 hostname=$(hostname)
 username=$(whoami)
 
-echo "Enter the directory name:"
 read -p "Directory: " dir
 
-# Create directory
 mkdir -p "$dir"
-
-# Create file
 touch "$dir/processes.txt"
 
-# Save running processes to the file
 ps > "$dir/processes.txt"
 
 echo ""
@@ -55,48 +49,26 @@ ps
 
 echo ""
 echo "Process information saved in: $dir/processes.txt"
+```
 
-# Store basic information in variables
-date=$(date)
-hostname=$(hostname)
-username=$(whoami)
+## Running the Script
 
-echo "Enter the directory name:"
-read -p "Directory: " dir
+First, give the script execute permission:
 
-# Create directory
-mkdir -p "$dir"
+```bash
+chmod +x system_info.sh
+```
 
-# Create file
-touch "$dir/processes.txt"
+Then run the script:
 
-# Save running processes to the file
-ps > "$dir/processes.txt"
+```bash
+./system_info.sh
+```
 
-echo ""
-echo "System Information"
-echo "------------------"
-echo "Date: $date"
-echo "Hostname: $hostname"
-echo "Username: $username"
-
-echo ""
-echo "Disk Usage:"
-df -h
-
-echo ""
-echo "Running Processes:"
-ps
-
-echo ""
-echo "Process information saved in: $dir/processes.txt"
-
-
-
-## Output
+## Input and Output
 
 ```text
-sunny@SaiCharan:~$ ./system_info.sh
+sunny@SaiCharan:~/shell-homework$ ./system_info.sh
 
 Directory: system_info
 
@@ -108,19 +80,73 @@ Username: sunny
 
 Disk Usage:
 Filesystem      Size  Used Avail Use% Mounted on
-...
+/dev/sdd        251G   18G  221G   8% /
+none            3.8G     0  3.8G   0% /usr/lib/modules/...
+none            3.8G     0  3.8G   0% /usr/lib/wsl/...
 
 Running Processes:
     PID TTY          TIME CMD
-   1234 pts/0    00:00:00 bash
-   1250 pts/0    00:00:00 ps
-   ...
+      1 pts/0    00:00:00 bash
+    123 pts/0    00:00:00 bash
+    456 pts/0    00:00:00 ps
 
 Process information saved in: system_info/processes.txt
 ```
 
+> **Note:** The `df -h` and `ps` output can be different on every system. The values above are only an example.
 
+## Files Created
 
+After running the script, the directory will look like this:
 
+```text
+shell-homework/
+├── system_info.sh
+└── system_info/
+    └── processes.txt
+```
 
+The `processes.txt` file contains the output of the `ps` command.
 
+## Checking the Created File
+
+```bash
+ls
+```
+
+Output:
+
+```text
+system_info
+system_info.sh
+```
+
+Check the file:
+
+```bash
+cat system_info/processes.txt
+```
+
+Output:
+
+```text
+    PID TTY          TIME CMD
+      1 pts/0    00:00:00 bash
+    123 pts/0    00:00:00 bash
+    456 pts/0    00:00:00 ps
+```
+
+## Result
+
+The script successfully:
+
+1. Displays the current date.
+2. Displays the hostname.
+3. Displays the username.
+4. Displays disk usage.
+5. Displays running processes.
+6. Uses variables to store information.
+7. Takes directory input using `read -p`.
+8. Creates a directory using `mkdir`.
+9. Creates a file using `touch`.
+10. Saves process information using `>` redirection.
