@@ -24,6 +24,8 @@ Docker overlay networks provide multi-host container networking. They create a d
 
 Example: 
 
+
+
 Docker Host 1                    Docker Host 2
 ┌───────────────┐                ┌───────────────┐
 │ Container A   │                │ Container B   │
