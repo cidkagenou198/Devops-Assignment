@@ -185,7 +185,7 @@ PS D:\Dev-Ops kubernetes\session10-k8s-core-objects> kubectl delete -f 01-rollin
 service "app-rolling-service" deleted from default namespace
 deployment.apps "app-rolling" deleted from default namespace
 ```
-
+```
 # Version V1
 <img width="1599" height="720" alt="image" src="https://github.com/user-attachments/assets/c58a0bb7-0e35-4f25-a0bb-f3aa5bf2ba86" />
 
@@ -195,7 +195,7 @@ deployment.apps "app-rolling" deleted from default namespace
 
 
 # 10. 02-blue-green
-
+```
 ```bash
 
 ## Step-by-Step Commands
@@ -379,10 +379,10 @@ service "myapp-service" deleted from default namespace
 deployment.apps "blue-green" deleted from default namespace
 deployment.apps "app-green" deleted from default namespace
 ```
-
+```
 <img width="1875" height="883" alt="image" src="https://github.com/user-attachments/assets/51c4f4dd-7330-4484-a7c9-3c00f6b7bc12" />
 
-
+```
 # 10. 03-canary
 
 ```bash
