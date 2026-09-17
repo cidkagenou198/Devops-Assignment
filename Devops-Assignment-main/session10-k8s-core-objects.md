@@ -186,11 +186,13 @@ service "app-rolling-service" deleted from default namespace
 deployment.apps "app-rolling" deleted from default namespace
 ```
 
-!image.png
+# Version V1
+<img width="1599" height="720" alt="image" src="https://github.com/user-attachments/assets/c58a0bb7-0e35-4f25-a0bb-f3aa5bf2ba86" />
 
 # Version V2
 
-!image.png
+<img width="1872" height="803" alt="image" src="https://github.com/user-attachments/assets/1b7a0ac7-0429-4dd9-812e-2d51c3367332" />
+
 
 # 10. 02-blue-green
 
@@ -374,11 +376,12 @@ PS D:\Dev-Ops kubernetes\session10-k8s-core-objects> kubectl delete -f 02-blue-g
 >> kubectl delete -f 02-blue-green/deployment-blue.yaml
 >> kubectl delete -f 02-blue-green/deployment-green.yaml
 service "myapp-service" deleted from default namespace
-Error from server (NotFound): error when deleting "02-blue-green/deployment-blue.yaml": deployments.apps "app-blue" not found
+deployment.apps "blue-green" deleted from default namespace
 deployment.apps "app-green" deleted from default namespace
 ```
 
-!image.png
+<img width="1875" height="883" alt="image" src="https://github.com/user-attachments/assets/51c4f4dd-7330-4484-a7c9-3c00f6b7bc12" />
+
 
 # 10. 03-canary
 
@@ -812,8 +815,8 @@ deployment.apps "app-recreate" deleted from default namespace
 PS D:\Dev-Ops kubernetes\session10-k8s-core-objects> 
 ```
 
-!image.png
+<img width="1900" height="667" alt="image" src="https://github.com/user-attachments/assets/2a9321d4-303f-44c0-bc07-7eafb0ee2c64" />
 
-!image.png
 
-#
+<img width="1892" height="654" alt="image" src="https://github.com/user-attachments/assets/f9db5b4b-7dd7-4cc4-b852-b98e96a910e4" />
+
