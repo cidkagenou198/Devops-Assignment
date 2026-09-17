@@ -816,5 +816,7 @@ PS D:\Dev-Ops kubernetes\session10-k8s-core-objects>
 ```
 ```
 ![Recreate v1](https://github.com/user-attachments/assets/2a9321d4-303f-44c0-bc07-7eafb0ee2c64)
+![Recreate v2](https://github.com/user-attachments/assets/b2ee19e4-9b54-48f5-8a4e-c6ab61fe33b4)
 
-![Recreate v2](https://github.com/user-attachments/assets/f9db5b4b-7dd7-4cc4-b852-b98e96a9104)
+
+
