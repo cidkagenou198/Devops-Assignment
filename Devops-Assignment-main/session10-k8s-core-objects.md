@@ -814,7 +814,7 @@ service "app-recreate-service" deleted from default namespace
 deployment.apps "app-recreate" deleted from default namespace
 PS D:\Dev-Ops kubernetes\session10-k8s-core-objects> 
 ```
-
+```
 ![Recreate v1](https://github.com/user-attachments/assets/2a9321d4-303f-44c0-bc07-7eafb0ee2c64)
 
 ![Recreate v2](https://github.com/user-attachments/assets/f9db5b4b-7dd7-4cc4-b852-b98e96a9104)
