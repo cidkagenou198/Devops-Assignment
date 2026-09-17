@@ -815,7 +815,7 @@ deployment.apps "app-recreate" deleted from default namespace
 PS D:\Dev-Ops kubernetes\session10-k8s-core-objects> 
 ```
 
-<img width="1900" height="667" alt="image" src="https://github.com/user-attachments/assets/2a9321d4-303f-44c0-bc07-7eafb0ee2c64" />
+[<img width="1900" height="667" alt="image" src="https://github.com/user-attachments/assets/2a9321d4-303f-44c0-bc07-7eafb0ee2c64" />]
 
 
 <img width="1892" height="654" alt="image" src="https://github.com/user-attachments/assets/f9db5b4b-7dd7-4cc4-b852-b98e96a910e4" />
