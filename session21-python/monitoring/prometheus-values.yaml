@@ -1,6 +1,0 @@
-grafana:
-  enabled: true
-prometheus:
-  prometheusSpec:
-    serviceMonitorSelectorNilUsesHelmValues: false
-    serviceMonitorNamespaceSelector: {}
