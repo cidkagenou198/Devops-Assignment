@@ -1,4 +1,6 @@
-<img width="781" height="583" alt="image" src="https://github.com/user-attachments/assets/6053ad5d-df72-438b-8792-ab53adcdb2ed" />01-kubectl-get
+01-kubectl-get
+
+<img width="781" height="583" alt="image" src="https://github.com/user-attachments/assets/6053ad5d-df72-438b-8792-ab53adcdb2ed" />
 
 
 <img width="886" height="282" alt="image" src="https://github.com/user-attachments/assets/fa2b0e0c-01e7-416e-9aef-38c815c5cda3" />
