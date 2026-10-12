@@ -64,6 +64,16 @@ curl -s http://localhost:9090/metrics | grep -E '^# TYPE prometheus_http_request
 
 ![Prometheus Metrics](screenshots/session20/task2-4-prom-metrics.png)
 
+## 5. Prometheus Expression Browser Web UI
+Open `http://localhost:9090` to execute PromQL queries (`up`, `process_cpu_seconds_total`) and observe real-time time-series evaluations in Table and Graph views:
+
+```bash
+# Access Prometheus UI in browser:
+http://localhost:9090
+```
+
+![Prometheus Web UI](screenshots/session20/task2-5-prometheus-web-ui.png)
+
 ---
 
 # Task 3: Grafana Visualization Stack
@@ -85,6 +95,16 @@ docker compose up -d && docker compose ps
 ```
 
 ![Grafana Stack Running](screenshots/session20/task3-2-grafana-stack.png)
+
+## 3. Configure Grafana Telemetry Dashboard
+Open Grafana (`http://localhost:3000`), connect Prometheus datasource, and construct visual panels for TSDB chunks, health status (`up`), and CPU utilization gauge:
+
+```bash
+# Access Grafana Dashboard:
+http://localhost:3000
+```
+
+![Grafana Dashboard](screenshots/session20/task3-3-grafana-dashboard.png)
 
 ---
 
@@ -122,13 +142,22 @@ cat app/argocd-application.yaml
 ![Argo CD App Yaml](screenshots/session20/task5-1-argocd-app-yaml.png)
 
 ## 2. Verify Argo CD synchronization status
-Inspect the Argo CD application status to verify cluster synchronization and health:
+Inspect the Argo CD application status via CLI to verify cluster synchronization and health:
 
 ```bash
 kubectl get applications -n argocd
 ```
 
 ![Argo CD Sync Status](screenshots/session20/task5-2-argocd-sync-status.png)
+
+## 3. Argo CD Application Overview Web UI
+Access the Argo CD web dashboard (`http://localhost:8080`) to inspect the synchronized `session20-app` tile displaying Health (`Healthy`), Sync Status (`Synced`), and Git repository commit tracking:
+
+```bash
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+
+![Argo CD Applications UI](screenshots/session20/task5-3-argocd-applications-ui.png)
 
 ---
 
@@ -161,7 +190,17 @@ kubectl scale deployment session20-mini -n session20 --replicas=1 && sleep 2 && 
 
 ![GitOps Self Healing](screenshots/session20/task6-3-gitops-self-healing.png)
 
-## 4. Teardown & cleanup
+## 4. Argo CD Live Workload Topology & Resource Tree
+Inspect the live resource tree in Argo CD showing declarative GitOps relationships spanning Application $\rightarrow$ Service + Deployment $\rightarrow$ ReplicaSet $\rightarrow$ Pods:
+
+```bash
+# View Application Topology in Argo CD:
+http://localhost:8080/applications/session20-app
+```
+
+![Argo CD Topology Tree](screenshots/session20/task6-5-argocd-resource-tree-ui.png)
+
+## 5. Teardown & cleanup
 Tear down the observability stack and clean up Kubernetes namespace:
 
 ```bash
